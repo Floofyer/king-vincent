@@ -20,7 +20,7 @@ public class Climber extends SubsystemBase{
 
     public Command up() {
 
-        return runOnce(() -> {
+        return run(() -> {
 
             motorLeft.set(1);
             motorRight.set(1);
@@ -29,7 +29,7 @@ public class Climber extends SubsystemBase{
 
     public Command down() {
 
-        return runOnce(() -> {
+        return run(() -> {
 
             motorLeft.set(-1);
             motorRight.set(-1);
@@ -39,7 +39,7 @@ public class Climber extends SubsystemBase{
 
     public Command normal() {
 
-        return runOnce(() -> {
+        return run(() -> {
 
             motorLeft.set(0);
             motorRight.set(0);
