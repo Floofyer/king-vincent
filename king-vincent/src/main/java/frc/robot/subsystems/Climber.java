@@ -1,18 +1,15 @@
 package frc.robot.subsystems;
 
-import java.util.function.BooleanSupplier;
-
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.Subsystem;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Climber extends SubsystemBase{
         
-    public static CANSparkMax motorLeft;
-    public static CANSparkMax motorRight;
+    public CANSparkMax motorLeft;
+    public CANSparkMax motorRight;
 
     public Climber() {
 
@@ -21,27 +18,32 @@ public class Climber extends SubsystemBase{
 
     }
 
-    public static Command up() {
+    public Command up() {
 
-        motorLeft.set(1);
-        motorRight.set(1);
-        return null;
-    
+        return runOnce(() -> {
+
+            motorLeft.set(1);
+            motorRight.set(1);
+        });
     }
 
-    public static Command down() {
+    public Command down() {
 
-        motorLeft.set(-1);
-        motorRight.set(-1);
-        return null;
+        return runOnce(() -> {
+
+            motorLeft.set(-1);
+            motorRight.set(-1);
+        });
 
     }
 
-    public static Command normal() {
+    public Command normal() {
 
-        motorLeft.set(0);
-        motorRight.set(0);
-        return null;
+        return runOnce(() -> {
+
+            motorLeft.set(0);
+            motorRight.set(0);
+        });
 
     }
 }
