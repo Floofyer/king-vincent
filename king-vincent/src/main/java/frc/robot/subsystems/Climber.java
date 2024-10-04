@@ -13,7 +13,8 @@ public class Climber extends SubsystemBase {
 
   public Climber() {
 
-    motorLeft = new CANSparkMax(1, MotorType.kBrushless);
+    motorLeft = new CANSparkMax(1, MotorType.kBrushless);//p[lease work]
+    
     motorRight = new CANSparkMax(2, MotorType.kBrushless);
   }
 
