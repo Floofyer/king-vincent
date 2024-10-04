@@ -117,7 +117,8 @@ spotless {
     target 'src/*/java/**/*.java'
         target fileTree('.') {
             include '**/*.java'
-            exclude '**/build/**', '**/build-*/**', '**/.history/**'
+            exclude '**/build/**', '**/build-*/**'
+            // , '**/.history/**'
         }
         toggleOffOn()
         googleJavaFormat()

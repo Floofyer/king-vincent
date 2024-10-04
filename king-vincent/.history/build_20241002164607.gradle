@@ -72,6 +72,9 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
+    implementation 'com.google.googlejavaformat:google-java-format:$googleJavaFormatVersion'
+
+
 }
 
 test {
@@ -117,7 +120,7 @@ spotless {
     target 'src/*/java/**/*.java'
         target fileTree('.') {
             include '**/*.java'
-            exclude '**/build/**', '**/build-*/**', '**/.history/**'
+            exclude '**/build/**', '**/build-*/**'
         }
         toggleOffOn()
         googleJavaFormat()

@@ -13,8 +13,8 @@ public class Climber extends SubsystemBase{
 
     public Climber() {
 
-        // motorLeft = new CANSparkMax(1, MotorType.kBrushless);
-        // motorRight = new CANSparkMax(2, MotorType.kBrushless);
+        motorLeft = new CANSparkMax(1, MotorType.kBrushless);
+        motorRight = new CANSparkMax(2, MotorType.kBrushless);
 
     }
 
@@ -32,7 +32,18 @@ public class Climber extends SubsystemBase{
         return run(() -> {
 
             motorLeft.set(-1);//sdsddsdsd
-            motorRight.set(-1);
+            motorRight.set(-1)
         });
+
+    }
+
+    public Command normal() {
+
+        return run(() -> {
+
+            motorLeft.set(0);
+            motorRight.set(0);
+        });
+
     }
 }

@@ -1,14 +1,15 @@
+// import com.diffplug.gradle.spotless.JavaExtension
+
 plugins {
     id "java"
     id "edu.wpi.first.GradleRIO" version "2024.1.1"
     id "com.diffplug.spotless" version "7.0.0.BETA2"
-
 }
 
-java {
+
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
-}
+
 
 def ROBOT_MAIN_CLASS = "frc.robot.Main"
 
@@ -72,6 +73,8 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
+    implementation 'com.google.googlejavaformat:google-java-format:$googleJavaFormatVersion'
+
 }
 
 test {
@@ -117,10 +120,11 @@ spotless {
     target 'src/*/java/**/*.java'
         target fileTree('.') {
             include '**/*.java'
-            exclude '**/build/**', '**/build-*/**', '**/.history/**'
+            exclude '**/build/**', '**/build-*/**'
         }
         toggleOffOn()
-        googleJavaFormat()
+        googleJavaFormat().reflowLongStrings()
+        removeUnusedImports()
         trimTrailingWhitespace()
         endWithNewline()
 
