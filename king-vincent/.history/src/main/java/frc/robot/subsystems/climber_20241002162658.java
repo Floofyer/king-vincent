@@ -22,6 +22,7 @@ public class Climber extends SubsystemBase {
     return run(
         () -> {
           motorLeft.set(1);
+
           motorRight.set(1);
         });
   }

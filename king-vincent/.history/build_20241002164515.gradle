@@ -72,6 +72,9 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
+    implementation 'com.google.googlejavaformat:google-java-format:$googleJavaFormatVersion'
+
+
 }
 
 test {
@@ -112,12 +115,12 @@ spotless {
 
     // define the steps to apply to those files
   }
-  java {
+  jav {
     
     target 'src/*/java/**/*.java'
         target fileTree('.') {
             include '**/*.java'
-            exclude '**/build/**', '**/build-*/**', '**/.history/**'
+            exclude '**/build/**', '**/build-*/**'
         }
         toggleOffOn()
         googleJavaFormat()
