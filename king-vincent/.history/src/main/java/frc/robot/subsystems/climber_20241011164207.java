@@ -11,7 +11,10 @@ public class Climber extends SubsystemBase {
   public CANSparkMax motorLeft;
   public CANSparkMax motorRight;
 
+
+
   
+
   public Climber() {
 
     motorLeft = new CANSparkMax(1, MotorType.kBrushless); // p[lease work]
