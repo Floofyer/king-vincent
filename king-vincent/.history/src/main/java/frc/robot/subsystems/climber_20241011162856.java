@@ -10,7 +10,6 @@ public class Climber extends SubsystemBase {
 
   public CANSparkMax motorLeft;
   public CANSparkMax motorRight;
-  
 
   public Climber() {
 
