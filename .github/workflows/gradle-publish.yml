@@ -10,8 +10,6 @@ on:
   
 
 jobs:
-  packages:
-    runs-on: ubuntu-latest
   build:
     runs-on: ubuntu-latest
     steps:
