@@ -120,8 +120,7 @@ spotless {
             exclude '**/build/**', '**/build-*/**', '**/.history/**'
         }
         toggleOffOn()
-        removeUnusedImports()
-        googleJavaFormat()
+        // googleJavaFormat()
         trimTrailingWhitespace()
         endWithNewline()
 

@@ -12,7 +12,6 @@ public class Climber extends SubsystemBase {
 
   public CANSparkMax motorLeft;
   public CANSparkMax motorRight;
-  
 
   public Climber() {
 
@@ -39,7 +38,6 @@ public class Climber extends SubsystemBase {
   }
 
   public Command normal() {
-
     return run(
         () -> {
           motorLeft.set(0);
