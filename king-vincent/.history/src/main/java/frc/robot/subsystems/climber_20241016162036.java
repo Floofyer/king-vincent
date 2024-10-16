@@ -36,11 +36,11 @@ public class Climber extends SubsystemBase {
   }
 
   public Command normal() {
-
     return run(
-        () -> {
-          motorLeft.set(0);
-          motorRight.set(0);
-        });
+        // () -> {
+        //   motorLeft.set(0);
+        //   motorRight.set(0);
+        // }
+        );
   }
 }
