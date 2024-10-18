@@ -51,7 +51,7 @@ jobs:
         run: git config --global --add safe.directory $GITHUB_WORKSPACE
 
       - name: Permission giving
-        run: give permission .\gradlew clean
+        run: .\gradlew clean
         
       - name: Run unit tests
         run: ./gradlew test
