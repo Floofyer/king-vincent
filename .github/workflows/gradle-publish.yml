@@ -23,7 +23,7 @@ jobs:
           java-version: 17
 
       - name: Permission giving
-        run: chmod +x gradlew
+        run: .\/gradlew
         
       - name: Spotless applied
         run: ./gradlew spotlessApply
