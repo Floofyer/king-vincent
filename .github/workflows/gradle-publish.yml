@@ -52,9 +52,6 @@ jobs:
 
       - name: Permission giving
         run: .\gradlew clean
-        
-      - name: Run unit tests
-        run: ./gradlew test
 
       - name: Compile and run tests on robot code
         run: ./gradlew build
