@@ -25,7 +25,7 @@ jobs:
           java-version: 17
 
       - name: Permission giving
-        run: give permission .\gradlew clean
+        run: give permission ./gradlew
         
       - name: Spotless applied
         run: ./gradlew spotlessApply
