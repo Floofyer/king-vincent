@@ -24,6 +24,9 @@ jobs:
           distribution: 'zulu'
           java-version: 17
 
+      - name: Permission giving
+        run: give permission .\gradlew clean
+        
       - name: Spotless applied
         run: ./gradlew spotlessApply
 
@@ -47,6 +50,9 @@ jobs:
       - name: Add repository to git safe directories
         run: git config --global --add safe.directory $GITHUB_WORKSPACE
 
+      - name: Permission giving
+        run: give permission .\gradlew clean
+        
       - name: Run unit tests
         run: ./gradlew test
 
