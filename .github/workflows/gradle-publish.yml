@@ -16,19 +16,17 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
           java-version: 17
 
       - name: Permission giving
-        run: ./gradlew build
+        run: chmod +x gradlew
         
       - name: Spotless applied
-        run: .\/gradlew spotlessApply
+        run: ./gradlew spotlessApply
 
   # simulate:
   #   runs-on: ubuntu-latest
