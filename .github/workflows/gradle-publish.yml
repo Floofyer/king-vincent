@@ -24,7 +24,7 @@ jobs:
           java-version: 17
 
       - name: idk
-        run: chmod +x ./king-vincent/gradlew
+        run: chmod +x gradlew
         
       - name: Spotless applied
         run: ./gradlew spotlessApply
