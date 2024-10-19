@@ -1,6 +1,5 @@
 name: CI
 
-
 on:
   workflow_dispatch:
   push:
@@ -24,8 +23,8 @@ jobs:
           distribution: 'zulu'
           java-version: 17
 
-      - name: Permission giving
-        run: give permission ./gradlew
+      - name: idk
+        run: chmod +x ./king-vincent/king-vincent/gradlew
         
       - name: Spotless applied
         run: ./gradlew spotlessApply
