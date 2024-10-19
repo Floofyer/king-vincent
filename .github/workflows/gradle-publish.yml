@@ -29,6 +29,9 @@ jobs:
       - name: Spotless applied
         run: ./gradlew spotlessCheck
 
+      - name: Compile and run tests on robot code
+        run: ./gradlew build
+
   build:
     runs-on: ubuntu-latest
     # container: wpilib/roborio-cross-ubuntu:2024-22.04
