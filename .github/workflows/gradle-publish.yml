@@ -31,13 +31,13 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    container: wpilib/roborio-cross-ubuntu:2024-22.04
+    # container: wpilib/roborio-cross-ubuntu:2024-22.04
     steps:
       - uses: actions/checkout@v3
       - name: Add repository to git safe directories
         run: git config --global --add safe.directory $GITHUB_WORKSPACE
 
-      - name: Permission giving
+      - name: idk 2
         run: chmod +x gradlew
 
       - name: Compile and run tests on robot code
