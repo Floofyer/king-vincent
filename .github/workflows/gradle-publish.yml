@@ -29,8 +29,8 @@ jobs:
       - name: Spotless applied
         run: ./gradlew spotlessCheck
 
-      - name: Compile and run tests on robot code
-        run: ./gradlew build
+      # - name: Compile and run tests on robot code
+      #   run: ./gradlew build
 
   build:
     runs-on: ubuntu-latest
@@ -42,6 +42,9 @@ jobs:
 
       - name: idk 2
         run: chmod +x gradlew
+
+      - name: Check spotless
+        run: ./gradlew spotlessCheck
 
       - name: Compile and run tests on robot code
         run: ./gradlew build
